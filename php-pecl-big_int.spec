@@ -21,23 +21,33 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		extensionsdir	%{_libdir}/php
 
 %description
-This package is useful for number theory applications.
-For example, in two-keys cryptography.
-See tests/RSA.php in the package for example of implementation of
-RSA-like cryptoalgorithm.
+This package is useful for number theory applications. For example, in
+two-keys cryptography. See tests/RSA.php in the package for example of
+implementation of RSA-like cryptoalgorithm.
 
 Also the package has many bitset functions, which allow to work with
 arbitrary length bitsets.
 
-This package is much faster than bundled into PHP BCMath.
-It implements almost all functions as in GMP extension,
-but it needn't any additional external libraries.
+This package is much faster than bundled into PHP BCMath. It
+implements almost all functions as in GMP extension, but it needn't
+any additional external libraries.
 
 In PECL status of this extension is: %{_status}.
 
-#%description -l pl
-#
-#To rozszerzenie ma w PECL status: %{_status}.
+%description -l pl
+Ten pakiet jest przydatny do zastosowañ z teorii liczb, na przyk³ad do
+kryptografii z u¿yciem dwóch kluczy. Przyk³adow± implementacjê
+algorytmu kryptograficznego podobnego do RSA mo¿na znale¼æ w tym
+pakiecie w pliku tests/RSA.php.
+
+Pakiet ma tak¿e wiele funkcji operuj±cych na bitach, umo¿liwiaj±cych
+dzia³anie na zbiorach bitów dowolnej d³ugo¶ci.
+
+Ten pakiet jest du¿o szybszy ni¿ wbudowany w PHP BCMath. Implementuje
+prawie wszystkie funkcje z rozszerzenia GMP, ale nie wymaga ¿adnych
+dodatkowych bibliotek zewnêtrznych.
+
+To rozszerzenie ma w PECL status: %{_status}.
 
 %prep
 %setup -q -c
