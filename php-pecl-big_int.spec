@@ -4,12 +4,12 @@
 Summary:	%{_modname} - set of functions for calculations with arbitrary length integers
 Summary(pl):	%{_modname} - zestaw funkcji do obliczeñ z u¿yciem liczb o dowolnej wielko¶ci
 Name:		php-pecl-%{_modname}
-Version:	1.0.1
+Version:	1.0.4
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
-# Source0-md5:	2426a06141ba8468feba124b5670be83
+# Source0-md5:	653452c32ace3266e1d6c04733651813
 URL:		http://pecl.php.net/package/big_int/
 BuildRequires:	libtool
 BuildRequires:	php-devel >= 3:5.0.0
