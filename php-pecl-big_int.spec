@@ -1,7 +1,7 @@
 %define		_modname	big_int
 %define		_status		stable
 Summary:	%{_modname} - set of functions for calculations with arbitrary length integers
-Summary(pl.UTF-8):   %{_modname} - zestaw funkcji do obliczeń z użyciem liczb o dowolnej wielkości
+Summary(pl.UTF-8):	%{_modname} - zestaw funkcji do obliczeń z użyciem liczb o dowolnej wielkości
 Name:		php-pecl-%{_modname}
 Version:	1.0.7
 Release:	1
