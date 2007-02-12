@@ -1,7 +1,7 @@
 %define		_modname	big_int
 %define		_status		stable
 Summary:	%{_modname} - set of functions for calculations with arbitrary length integers
-Summary(pl):	%{_modname} - zestaw funkcji do obliczeÒ z uøyciem liczb o dowolnej wielko∂ci
+Summary(pl.UTF-8):   %{_modname} - zestaw funkcji do oblicze≈Ñ z u≈ºyciem liczb o dowolnej wielko≈õci
 Name:		php-pecl-%{_modname}
 Version:	1.0.7
 Release:	1
@@ -31,18 +31,18 @@ any additional external libraries.
 
 In PECL status of this extension is: %{_status}.
 
-%description -l pl
-Ten pakiet jest przydatny do zastosowaÒ z teorii liczb, na przyk≥ad do
-kryptografii z uøyciem dwÛch kluczy. Przyk≥adow± implementacjÍ
-algorytmu kryptograficznego podobnego do RSA moøna znaleºÊ w tym
+%description -l pl.UTF-8
+Ten pakiet jest przydatny do zastosowa≈Ñ z teorii liczb, na przyk≈Çad do
+kryptografii z u≈ºyciem dw√≥ch kluczy. Przyk≈ÇadowƒÖ implementacjƒô
+algorytmu kryptograficznego podobnego do RSA mo≈ºna znale≈∫ƒá w tym
 pakiecie w pliku tests/RSA.php.
 
-Pakiet ma takøe wiele funkcji operuj±cych na bitach, umoøliwiaj±cych
-dzia≥anie na zbiorach bitÛw dowolnej d≥ugo∂ci.
+Pakiet ma tak≈ºe wiele funkcji operujƒÖcych na bitach, umo≈ºliwiajƒÖcych
+dzia≈Çanie na zbiorach bit√≥w dowolnej d≈Çugo≈õci.
 
-Ten pakiet jest duøo szybszy niø wbudowany w PHP BCMath. Implementuje
-prawie wszystkie funkcje z rozszerzenia GMP, ale nie wymaga øadnych
-dodatkowych bibliotek zewnÍtrznych.
+Ten pakiet jest du≈ºo szybszy ni≈º wbudowany w PHP BCMath. Implementuje
+prawie wszystkie funkcje z rozszerzenia GMP, ale nie wymaga ≈ºadnych
+dodatkowych bibliotek zewnƒôtrznych.
 
 To rozszerzenie ma w PECL status: %{_status}.
 
