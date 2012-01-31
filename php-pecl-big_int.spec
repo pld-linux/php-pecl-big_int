@@ -4,7 +4,7 @@ Summary:	%{_modname} - set of functions for calculations with arbitrary length i
 Summary(pl.UTF-8):	%{_modname} - zestaw funkcji do obliczeń z użyciem liczb o dowolnej wielkości
 Name:		php-pecl-%{_modname}
 Version:	1.0.7
-Release:	1
+Release:	2
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
