@@ -1,20 +1,21 @@
-%define		_modname	big_int
-%define		_status		stable
-Summary:	%{_modname} - set of functions for calculations with arbitrary length integers
-Summary(pl.UTF-8):	%{_modname} - zestaw funkcji do obliczeń z użyciem liczb o dowolnej wielkości
-Name:		php-pecl-%{_modname}
+%define		php_name	php%{?php_suffix}
+%define		modname	big_int
+%define		status		stable
+Summary:	%{modname} - set of functions for calculations with arbitrary length integers
+Summary(pl.UTF-8):	%{modname} - zestaw funkcji do obliczeń z użyciem liczb o dowolnej wielkości
+Name:		%{php_name}-pecl-%{modname}
 Version:	1.0.7
 Release:	2
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
+Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 # Source0-md5:	d858d5bcfd3f789cb1ae8cb8ff09d3e9
 URL:		http://pecl.php.net/package/big_int/
-BuildRequires:	php-devel >= 3:5.0.0
-BuildRequires:	rpmbuild(macros) >= 1.344
+BuildRequires:	%{php_name}-devel >= 3:5.0.0
+BuildRequires:	rpmbuild(macros) >= 1.650
 %{?requires_php_extension}
-Requires:	php-common >= 4:5.0.4
-Obsoletes:	php-pear-%{_modname}
+Requires:	php(core) >= 5.0.4
+Obsoletes:	php-pear-%{modname}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -29,7 +30,7 @@ This package is much faster than bundled into PHP BCMath. It
 implements almost all functions as in GMP extension, but it needn't
 any additional external libraries.
 
-In PECL status of this extension is: %{_status}.
+In PECL status of this extension is: %{status}.
 
 %description -l pl.UTF-8
 Ten pakiet jest przydatny do zastosowań z teorii liczb, na przykład do
@@ -44,13 +45,13 @@ Ten pakiet jest dużo szybszy niż wbudowany w PHP BCMath. Implementuje
 prawie wszystkie funkcje z rozszerzenia GMP, ale nie wymaga żadnych
 dodatkowych bibliotek zewnętrznych.
 
-To rozszerzenie ma w PECL status: %{_status}.
+To rozszerzenie ma w PECL status: %{status}.
 
 %prep
-%setup -q -c
+%setup -qc
+mv %{modname}-%{version}/* .
 
 %build
-cd %{_modname}-%{version}
 phpize
 %configure
 %{__make}
@@ -58,11 +59,10 @@ phpize
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{php_sysconfdir}/conf.d,%{php_extensiondir}}
-
-install %{_modname}-%{version}/modules/%{_modname}.so $RPM_BUILD_ROOT%{php_extensiondir}
-cat <<'EOF' > $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d/%{_modname}.ini
-; Enable %{_modname} extension module
-extension=%{_modname}.so
+install -p modules/%{modname}.so $RPM_BUILD_ROOT%{php_extensiondir}
+cat <<'EOF' > $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d/%{modname}.ini
+; Enable %{modname} extension module
+extension=%{modname}.so
 EOF
 
 %clean
@@ -78,6 +78,6 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc %{_modname}-%{version}/{docs,tests,CREDITS,README}
-%config(noreplace) %verify(not md5 mtime size) %{php_sysconfdir}/conf.d/%{_modname}.ini
-%attr(755,root,root) %{php_extensiondir}/%{_modname}.so
+%doc CREDITS README docs tests
+%config(noreplace) %verify(not md5 mtime size) %{php_sysconfdir}/conf.d/%{modname}.ini
+%attr(755,root,root) %{php_extensiondir}/%{modname}.so
