@@ -5,7 +5,7 @@ Summary:	%{modname} - set of functions for calculations with arbitrary length in
 Summary(pl.UTF-8):	%{modname} - zestaw funkcji do obliczeń z użyciem liczb o dowolnej wielkości
 Name:		%{php_name}-pecl-%{modname}
 Version:	1.0.7
-Release:	3
+Release:	4
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
@@ -16,6 +16,7 @@ BuildRequires:	rpmbuild(macros) >= 1.650
 %{?requires_php_extension}
 Requires:	php(core) >= 5.0.4
 Obsoletes:	php-pear-%{modname}
+Provides:	php(%{modname}) = %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
